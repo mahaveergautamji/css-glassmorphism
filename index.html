@@ -8,9 +8,6 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-
     <style>
     /* Your CSS is included here (unchanged except for content updates) */
     *{
@@ -22,12 +19,15 @@
         text-decoration: none;
         font-weight: normal;
     }
+    /*
+        Removed 'overflow: hidden' to enable vertical scrolling on mobile devices.
+    */
     html{
         font-size: 62.5%;
-        overflow: hidden;
+        overflow-x: hidden;
     }
     body{
-        overflow: hidden;
+        overflow-x: hidden;
         min-height: 100vh;
         display: flex;
         align-items: flex-start;
@@ -359,6 +359,64 @@
         box-shadow: 0 0 0 .5rem rgba(255,255,255,.2),
                     0 1rem 2rem rgba(0,0,0,.4);
     }
+    
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+        body {
+            /* Stacks the header and container vertically on smaller screens */
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        header {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            width: 100%;
+            height: auto;
+        }
+        
+        .contact .row {
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+
+        .contact .row form {
+            width: 100%;
+            padding: 1rem;
+        }
+        
+        .contact .row form .box {
+            width: 100%;
+        }
+
+        .contact .row .content {
+            padding: 2rem 0;
+        }
+
+        .education .box-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .education .box-container .box {
+            width: 100%;
+            padding: 1rem 2rem;
+        }
+
+        .home .share {
+            position: relative;
+            left: unset;
+            bottom: unset;
+            transform: unset;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
     </style>
 </head>
 <body>
@@ -367,7 +425,7 @@
 
 <header>
     <div class="user">
-        <img src="M.jpg" alt="mahaveer">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFWUJTS9048sA/profile-displayphoto-shrink_800_800/B4EZbo7pBJHcAc-/0/1747664671323?e=1760572800&v=beta&t=pfnz_ATwCdMqeYBmHi3uqqnGOqRo-PgQtZd_OXQcuNE" alt="Mahaveer Gautam's profile picture">
         <h3 class="name">Mahaveer Gautam</h3>
         <p class="post">Front End Developer</p>
     </div>
@@ -396,11 +454,10 @@
         <a href="https://www.linkedin.com/in/mahaveergautam/" target="_blank"><button class="btn">hire me</button></a>
 
         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-pinterest"></a>
             <a href="https://www.linkedin.com/in/mahaveergautam/" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://www.reddit.com/user/mahaveergautamji/" class="fab fa-reddit-alien" target="_blank"></a>
+            <a href="https://www.youtube.com/@mahaveergautamji" class="fab fa-youtube" target="_blank"></a>
+            <a href="https://www.instagram.com/mahaveergautamji/" class="fab fa-instagram" target="_blank"></a>
         </div>
     </section>
 
